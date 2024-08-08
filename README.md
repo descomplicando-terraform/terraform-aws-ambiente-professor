@@ -7,6 +7,8 @@ Módulo para criação do ambiente sugerido pelo professor
  - Uma etapa do pipeline que atualize automaticamente a versão do example
  - Adicionar teste automatizado no pipeline
  - Colocar tfsec para enviar relatório para github security
+ - Adicionar terraform-docs no pipeline
+
 <!-- BEGIN_TF_DOCS -->
 ## Requirements
 
