@@ -1,7 +1,7 @@
 name: testando-modulo-terraform
 run-name: ${{ github.actor }} iniciou o teste do módulo terraform
 on:
-  pull_request:
+  push:
 jobs:
   tfsec:
     runs-on: ubuntu-latest
@@ -9,6 +9,6 @@ jobs:
       - name: baixando código
         uses: actions/checkout@v4
       - name: tfsec
-        uses: aquasecurity/tfsec-pr-commenter-action@v1.2.0
+        uses: aquasecurity/tfsec-pr-commenter-action@v1.3.1
         with:
-          github_token: ${{ github.token }}
+          github_token: ${{ github.token }} 
