@@ -1,7 +1,7 @@
 name: testando-modulo-terraform
 run-name: ${{ github.actor }} iniciou o teste do módulo terraform
 on:
-  push:
+  pull_request:
 jobs:
   tfsec:
     runs-on: ubuntu-latest
