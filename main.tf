@@ -13,7 +13,7 @@ data "aws_ami" "ubuntu" {
   }
 
 }
-#tfsec:ignore:aws-ec2-enforce-http-token-imds:exp:2025-01-02
+#tfsec:ignore:aws-ec2-enforce-http-token-imds:exp:2025-02-02
 resource "aws_instance" "this" {
   ami           = data.aws_ami.ubuntu.id
   instance_type = "t3.micro"
