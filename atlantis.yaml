@@ -1,0 +1,20 @@
+version: 3
+automerge: true
+delete_source_branch_on_merge: true
+parallel_plan: true
+parallel_apply: true
+
+projects:
+  - &template
+    name: template
+    dir: template
+    autoplan:
+      enabled: true
+      when_modified:
+        - "**/*.tf"
+        - "**/*.tfvars"
+        - ".terraform.lock.hcl"
+
+  - <<: *template
+    name: ambiente-professor
+    dir: examples/simple
